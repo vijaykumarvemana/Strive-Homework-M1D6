@@ -34,6 +34,9 @@
         .add-font{
           font-size: 30px;
         }
+        .hidden {
+      visibility: hidden;
+    }
     </style>
 <head>
 <body>
@@ -42,6 +45,8 @@
  <button type="button" onclick="changeHeader()">change Header</button>
  <button type="button" onclick="footerFake()">change address</button>
  <button type="button" onclick="addClassToLinks()">change link font size</button>
+ <button type="button" onclick="imagetoggle()">hidden images</button>
+
 
 
     <h1>Cricket-Shop</h1>
@@ -105,7 +110,12 @@
           link.classList.add("add-font")
         }
       }
-      
+      const imagetoggle = function () {
+        let allImages = document.querySelectorAll('img')
+        for (let image of allImages) {
+        image.classList.toggle("hidden")
+      }
+    }
   </script>
   
   
