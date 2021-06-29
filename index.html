@@ -7,6 +7,11 @@
     <title>Document</title>
 
     <style>
+        .container-for-all{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
         .card {
           box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
           transition: 0.3s;
@@ -23,8 +28,11 @@
         footer {
          text-align: center;
          padding: 3px;
-         background-color: DarkSalmon;
+         background-color: rgb(8, 8, 8);
          color: white;
+        }
+        .add-font{
+          font-size: 30px;
         }
     </style>
 <head>
@@ -32,9 +40,11 @@
  <!--Add an h1 tag with the name of your shop-->
  <button type="button" onclick="changeBackGround()">Set background color</button>
  <button type="button" onclick="changeHeader()">change Header</button>
+ <button type="button" onclick="footerFake()">change address</button>
+ <button type="button" onclick="addClassToLinks()">change link font size</button>
 
 
-    <h1 id="h1-tag">Cricket-Shop</h1>
+    <h1>Cricket-Shop</h1>
     <TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
         <TR>
            <TH COLSPAN="2"><BR><H3>PRODUCTS TABLE</H3>
@@ -45,88 +55,56 @@
            <TH>Product Price</TH>
         </TR>
         <TR ALIGN="CENTER">
-           <TD><a href="https://www.amazon.com">CRICKET-KIT</a></TD>
+           <TD><img src="kit.jpg" style="width: 50px;height: 50px;" />
+            <a href="https://www.amazon.com" >CRICKET-KIT</a><p>All Items Here </p></TD>
            <TD>$2500</TD>
         </TR>
         <TR ALIGN="CENTER">
-            <TD><a href="https://www.amazon.com">CRIKET HELMET</a></TD>
+            <TD><img src="helmet.jpg" style="width: 50px;height: 50px;" />
+              <a href="https://www.amazon.com">CRIKET HELMET</a><p>High Safety</p> </TD>
             <TD>$30</TD>
          </TR>
          <TR ALIGN="CENTER">
-            <TD><a href="https://www.amazon.com">CRIKET BATS</a></TD>
+            <TD><img src="bats.jpg" style="width: 50px;height: 50px;" />
+              <a href="https://www.amazon.com">CRIKET BATS</a><p>English Willow Nice To Have</p></TD>
             <TD>$500</TD>
          </TR><TR ALIGN="CENTER">
-            <TD><a href="https://www.amazon.com">CRIKET BALLS</a></TD>
+            <TD><img src="balls.jpg" style="width: 50px;height: 50px;" />
+              <a href="https://www.amazon.com">CRIKET BALLS</a><p>High Quality Balls</p> </TD>
             <TD>$30</TD>
          </TR><TR ALIGN="CENTER">
-            <TD><a href="https://www.amazon.com">CRIKET PADS</a></TD>
+            <TD><img src="pads.jpg" style="width: 50px;height: 50px;" />
+              <a href="https://www.amazon.com">CRIKET PADS</a> <p>Nice Color Pads</p></TD>
             <TD>$150</TD>
          </TR>
      </TABLE>
-  <div class="card">
-  <img src="bats.jpg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>Bats</b></h4> 
-    <p>English Willow good quality</p> 
-  </div>
-</div>
-<div class="card">
-    <img src="pads.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4><b>Pads</b></h4> 
-      <p>nice color pads</p> 
-    </div>
-  </div>
-  <div class="card">
-    <img src="balls.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4><b>Balls</b></h4> 
-      <p>nice quality</p> 
-    </div>
-  </div>
-  <div class="card">
-    <img src="kit.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4><b>Whole Kit</b></h4> 
-      <p>All Items here </p> 
-    </div>
-  </div>
-  <div class="card">
-    <img src="helmet.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4><b>Helmet</b></h4> 
-      <p>high safety</p> 
-    </div>
-  </div>
-  <div>
-    <form id="new-user">
-        <input type="text" name="username" placeholder="Username" />
-        <input type="text" name="message" placeholder="Message" />
-        <a id="send" class="btn btn-primary">SEND</a>
-    </form>	
-  </div>
-  <footer class = "foo">
-    <p>contact-us<br>
-    <a href="cricketshop@gmail.com">cricketshop@gmail.com</a></p>
+
+  <footer>
+    <div>Cricket-Shop</div>
+    <div>4817 Bolman Court, Champaign IL United States</div>
   </footer>
 
   <script>
+
       const changeHeader = function () {
-        let myHeading = document.getElementById('h1-tag')
-        myHeading.innerText = "hi this is cricket shop"
-    }
-    
-    const changeBackGround = function(){
-        document.body.style.backgroundColor = "blue";
+          let myHeading = document.querySelector('h1')
+          myHeading.innerText = "Hi this is Cricket Shop"
       }
-      const footer = function(){
-          let foot = document.querySelector('.footer a ')
-          foot.innerText = "fake@gmail.com"
+
+      const changeBackGround = function(){
+        document.body.style.backgroundColor = "blue"
       }
-         const addClass = function () {
-            let add = document.getElementsByTagName("a");
-            add.className += "addCSS"
+
+      const footerFake = function(){
+          let footer = document.querySelector('footer > div:nth-child(2)')
+          footer.innerText = "###fake address:4817 Bolman Court, Champaign IL United States###"
+      }
+      const addClassToLinks = function() {
+        let allLinks = document.querySelectorAll("a")
+        for(let link of allLinks){
+          link.classList.add("add-font")
         }
+      }
       
   </script>
   
