@@ -30,7 +30,11 @@
 <head>
 <body>
  <!--Add an h1 tag with the name of your shop-->
-    <h1>Cricket-Shop</h1>
+ <button type="button" onclick="changeBackGround()">Set background color</button>
+ <button type="button" onclick="changeHeader()">change Header</button>
+
+
+    <h1 id="h1-tag">Cricket-Shop</h1>
     <TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
         <TR>
            <TH COLSPAN="2"><BR><H3>PRODUCTS TABLE</H3>
@@ -101,10 +105,25 @@
         <a id="send" class="btn btn-primary">SEND</a>
     </form>	
   </div>
-  <footer>
+  <footer class = "foo">
     <p>contact-us<br>
     <a href="cricketshop@gmail.com">cricketshop@gmail.com</a></p>
   </footer>
+
+  <script>
+      const changeHeader = function () {
+        let myHeading = document.getElementById('h1-tag')
+        myHeading.innerText = "hi this is cricket shop"
+    }
+    
+    const changeBackGround = function(){
+        document.body.style.backgroundColor = "blue";
+      }
+      const footer = function(){
+          let foot = document.querySelector('.footer a ')
+          foot.replaceChild()
+      }
+  </script>
   
   
     
