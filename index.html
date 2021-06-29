@@ -5,26 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
-        .container-for-all{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        .card {
-          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-          transition: 0.3s;
-          width: 10%;
-        }
-        
-        .card:hover {
-          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
-        
-        .container {
-          padding: 2px 16px;
-        }
         footer {
          text-align: center;
          padding: 3px;
@@ -46,6 +27,7 @@
  <button type="button" onclick="footerFake()">change address</button>
  <button type="button" onclick="addClassToLinks()">change link font size</button>
  <button type="button" onclick="imagetoggle()">hidden images</button>
+ <button type="button" onclick="setRandomColor()">setting color for price</button>
 
 
 
@@ -114,11 +96,22 @@
         let allImages = document.querySelectorAll('img')
         for (let image of allImages) {
         image.classList.toggle("hidden")
-      }
-    }
-  </script>
-  
-  
-    
+       }
+     }
+     const setRandomColor = function () {
+       let color = getRandomColor()
+       let allPrices = document.querySelectorAll("tr > td:nth-child(2)")
+       for (let price of allPrices){
+         price.style.color = color
+       }
+     }
+     const getRandomColor = function () {
+       let red = Math.round(Math.random() * 255)
+       let green = Math.round(Math.random() * 255)
+       let blue = Math.round(Math.random() * 255)
+       return "rgb(" + red +", " + green + ", " + blue + ")"
+     }
+
+  </script>  
 </body>
 </html>
