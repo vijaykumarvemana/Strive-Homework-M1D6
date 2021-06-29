@@ -5,8 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+
+    <style>
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          width: 10%;
+        }
+        
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        
+        .container {
+          padding: 2px 16px;
+        }
+        footer {
+         text-align: center;
+         padding: 3px;
+         background-color: DarkSalmon;
+         color: white;
+        }
+    </style>
+<head>
 <body>
+ <!--Add an h1 tag with the name of your shop-->
+    <h1>Cricket-Shop</h1>
+    <TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
+        <TR>
+           <TH COLSPAN="2"><BR><H3>PRODUCTS TABLE</H3>
+           </TH>
+        </TR>
+        <TR>
+           <TH>Product Name</TH>
+           <TH>Product Price</TH>
+        </TR>
+        <TR ALIGN="CENTER">
+           <TD><a href="https://www.amazon.com">CRICKET-KIT</a></TD>
+           <TD>$2500</TD>
+        </TR>
+        <TR ALIGN="CENTER">
+            <TD><a href="https://www.amazon.com">CRIKET HELMET</a></TD>
+            <TD>$30</TD>
+         </TR>
+         <TR ALIGN="CENTER">
+            <TD><a href="https://www.amazon.com">CRIKET BATS</a></TD>
+            <TD>$500</TD>
+         </TR><TR ALIGN="CENTER">
+            <TD><a href="https://www.amazon.com">CRIKET BALLS</a></TD>
+            <TD>$30</TD>
+         </TR><TR ALIGN="CENTER">
+            <TD><a href="https://www.amazon.com">CRIKET PADS</a></TD>
+            <TD>$150</TD>
+         </TR>
+     </TABLE>
+  <div class="card">
+  <img src="bats.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Bats</b></h4> 
+    <p>English Willow good quality</p> 
+  </div>
+</div>
+<div class="card">
+    <img src="pads.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Pads</b></h4> 
+      <p>nice color pads</p> 
+    </div>
+  </div>
+  <div class="card">
+    <img src="balls.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Balls</b></h4> 
+      <p>nice quality</p> 
+    </div>
+  </div>
+  <div class="card">
+    <img src="kit.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Whole Kit</b></h4> 
+      <p>All Items here </p> 
+    </div>
+  </div>
+  <div class="card">
+    <img src="helmet.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Helmet</b></h4> 
+      <p>high safety</p> 
+    </div>
+  </div>
+  <div>
+    <form id="new-user">
+        <input type="text" name="username" placeholder="Username" />
+        <input type="text" name="message" placeholder="Message" />
+        <a id="send" class="btn btn-primary">SEND</a>
+    </form>	
+  </div>
+  <footer>
+    <p>contact-us<br>
+    <a href="cricketshop@gmail.com">cricketshop@gmail.com</a></p>
+  </footer>
+  
+  
     
 </body>
 </html>
